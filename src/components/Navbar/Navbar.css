@@ -1,0 +1,678 @@
+/* ULTRA-MODERN PREMIUM GLASSMORPHISM NAVBAR */
+.knora-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .knora-navbar {
+  background: rgba(10, 14, 26, 0.88);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.knora-navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Brand Logo */
+.knora-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  group: true;
+}
+
+.brand-badge-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1A73E8 0%, #0052cc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(26, 115, 232, 0.35);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.knora-brand-logo:hover .brand-badge-box {
+  transform: scale(1.06) rotate(-3deg);
+  box-shadow: 0 6px 18px rgba(26, 115, 232, 0.5);
+}
+
+.brand-badge-box.small {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+}
+
+.brand-title-text {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-primary, #0f172a);
+}
+
+.brand-dot {
+  background: linear-gradient(135deg, #1A73E8 0%, #0052cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+/* Left Section Layout: Brand Logo + Search Bar */
+.knora-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex: 1;
+  max-width: 580px;
+}
+
+/* Coursera-Style Search Bar on Left */
+.knora-header-search-form {
+  flex: 1;
+  max-width: 360px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .knora-header-search-form {
+    display: none;
+  }
+}
+
+.knora-header-search-input {
+  width: 100%;
+  padding: 0.55rem 2.85rem 0.55rem 1.15rem;
+  border-radius: 99px;
+  border: 1px solid var(--border-primary, #cbd5e1);
+  background: var(--bg-primary, #ffffff);
+  font-size: 0.875rem;
+  color: var(--text-primary, #0f172a);
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+[data-theme='dark'] .knora-header-search-input {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+}
+
+.knora-header-search-input:focus {
+  outline: none;
+  border-color: #1A73E8;
+  box-shadow: 0 0 0 3.5px rgba(26, 115, 232, 0.16);
+}
+
+.knora-header-search-btn {
+  position: absolute;
+  right: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1A73E8;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.knora-header-search-btn:hover {
+  background: #0052cc;
+  transform: scale(1.05);
+}
+
+/* Right Section Layout: Nav Links + Theme Toggle + Profile */
+.knora-nav-right {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 1.25vw, 1.5rem);
+}
+
+.knora-nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 1.2vw, 1.35rem);
+}
+
+@media (max-width: 1024px) {
+  .knora-nav-links {
+    display: none;
+  }
+}
+
+/* Mobile Search in Drawer */
+.mobile-search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.mobile-search-input {
+  width: 100%;
+  padding: 0.6rem 2.75rem 0.6rem 1rem;
+  border-radius: 99px;
+  border: 1px solid var(--border-primary, #cbd5e1);
+  font-size: 0.875rem;
+  color: var(--text-primary, #0f172a);
+  background: var(--bg-primary, #ffffff);
+  font-family: inherit;
+}
+
+.mobile-search-btn {
+  position: absolute;
+  right: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1A73E8;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--text-secondary, #475569);
+  text-decoration: none;
+  font-size: clamp(0.85rem, 0.9vw, 0.95rem);
+  font-weight: 600;
+  padding: 0.4rem 0.2rem;
+  border-radius: 0;
+  transition: color 0.25s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+}
+
+/* Animated Hover Underline */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 2.5px;
+  background: linear-gradient(90deg, #1A73E8 0%, #0052cc 100%);
+  border-radius: 99px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link:hover {
+  color: #1A73E8;
+  background: transparent;
+  transform: none;
+}
+
+[data-theme='dark'] .nav-link {
+  color: #94a3b8;
+}
+
+[data-theme='dark'] .nav-link:hover {
+  color: #60a5fa;
+  background: transparent;
+}
+
+[data-theme='dark'] .nav-link::after {
+  background: linear-gradient(90deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+.nav-link.active {
+  color: #1A73E8;
+  background: transparent;
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+[data-theme='dark'] .nav-link.active {
+  color: #60a5fa;
+  background: transparent;
+  border-color: transparent;
+}
+
+/* Ultra-Premium AI Badge for Guru.AI (Unified Brand Blue) */
+.guru-ai-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.15rem;
+  border-radius: 99px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1A73E8 0%, #2563eb 50%, #1e40af 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(26, 115, 232, 0.38);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  letter-spacing: -0.01em;
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.guru-ai-pill-badge::after {
+  display: none;
+}
+
+.guru-ai-pill-badge::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, transparent 60%);
+  transform: rotate(30deg);
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.guru-ai-pill-badge:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(26, 115, 232, 0.55);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+}
+
+.guru-ai-pill-badge.active {
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.3), 0 8px 24px rgba(26, 115, 232, 0.55);
+}
+
+.guru-ai-sparkle-icon {
+  color: #ffffff !important;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: pulseSparkle 2.2s infinite ease-in-out;
+}
+
+@keyframes pulseSparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(15deg); }
+}
+
+[data-theme='dark'] .theme-toggle-btn:hover {
+  border-color: #60a5fa;
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.12);
+}
+
+.auth-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.btn-knora-login {
+  background: transparent;
+  color: var(--text-primary, #0f172a);
+  border: 1px solid var(--border-primary, #cbd5e1);
+  padding: 0.5rem 1.15rem;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.btn-knora-login:hover {
+  border-color: #1A73E8;
+  color: #1A73E8;
+  background: rgba(26, 115, 232, 0.06);
+  transform: translateY(-1px);
+}
+
+[data-theme='dark'] .btn-knora-login {
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme='dark'] .btn-knora-login:hover {
+  border-color: #60a5fa;
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.btn-knora-getstarted {
+  background: linear-gradient(135deg, #1A73E8 0%, #0052cc 100%);
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 1.35rem;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(26, 115, 232, 0.35);
+  font-family: inherit;
+}
+
+.btn-knora-getstarted:hover {
+  background: linear-gradient(135deg, #1557b0 0%, #003d99 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 115, 232, 0.45);
+}
+
+.btn-knora-getstarted svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-knora-getstarted:hover svg {
+  transform: translateX(3px);
+}
+
+/* Official Round Profile Avatar Icon & Dropdown */
+.user-profile-menu-wrapper {
+  position: relative;
+}
+
+.user-avatar-btn {
+  background: transparent;
+  border: 2.5px solid #1A73E8;
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: 42px;
+  height: 42px;
+  box-shadow: 0 4px 14px rgba(26, 115, 232, 0.25);
+}
+
+.user-avatar-btn:hover {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 6px 18px rgba(26, 115, 232, 0.45);
+  border-color: #0052cc;
+}
+
+.user-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #e8f0fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid var(--bg-primary, #ffffff);
+}
+
+[data-theme='dark'] .user-avatar-inner {
+  background: #1e293b;
+  border-color: #0f172a;
+}
+
+.round-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.round-avatar-initials {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #1A73E8;
+  letter-spacing: -0.02em;
+}
+
+[data-theme='dark'] .round-avatar-initials {
+  color: #60a5fa;
+}
+
+/* User Profile Dropdown Menu */
+.user-profile-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 230px;
+  background: var(--bg-primary, #ffffff);
+  border: 1px solid var(--border-primary, #e2e8f0);
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.14);
+  padding: 0.65rem;
+  z-index: 2500;
+  animation: dropdownFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme='dark'] .user-profile-dropdown {
+  background: #0f172a;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-user-header {
+  padding: 0.5rem 0.75rem 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--border-primary, #e2e8f0);
+  margin-bottom: 0.4rem;
+}
+
+[data-theme='dark'] .dropdown-user-header {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dropdown-user-name {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--text-primary, #0f172a);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-user-email {
+  font-size: 0.775rem;
+  color: var(--text-secondary, #64748b);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-item-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary, #0f172a);
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+[data-theme='dark'] .dropdown-item-btn {
+  color: #f8fafc;
+}
+
+.dropdown-item-btn:hover {
+  background: rgba(26, 115, 232, 0.08);
+  color: #1A73E8;
+}
+
+[data-theme='dark'] .dropdown-item-btn:hover {
+  background: rgba(96, 165, 250, 0.12);
+  color: #60a5fa;
+}
+
+.dropdown-item-btn.logout-item {
+  color: #ef4444;
+}
+
+.dropdown-item-btn.logout-item:hover {
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+}
+
+.mobile-hamburger-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary, #0f172a);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+@media (max-width: 1024px) {
+  .mobile-hamburger-btn {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Mobile Drawer */
+.mobile-drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  animation: fadeInBackdrop 0.25s ease;
+}
+
+@keyframes fadeInBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mobile-drawer-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 82%;
+  max-width: 320px;
+  height: 100%;
+  background: var(--bg-primary, #ffffff);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
+  animation: slideDrawer 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDrawer {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-primary, #e2e8f0);
+  margin-bottom: 1.25rem;
+}
+
+.drawer-close-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  color: var(--text-primary, #0f172a);
+  width: 32px;
+  height: 32px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #0f172a);
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-item.active, .mobile-item.ai-item {
+  color: #1A73E8;
+  background: rgba(26, 115, 232, 0.08);
+  border-color: rgba(26, 115, 232, 0.2);
+}
+
+.mobile-auth-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-primary, #e2e8f0);
+}
+
+.btn-knora-login.full, .btn-knora-getstarted.full, .btn-knora-logout.full {
+  width: 100%;
+  justify-content: center;
+}
+

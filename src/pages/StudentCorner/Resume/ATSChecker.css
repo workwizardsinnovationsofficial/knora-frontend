@@ -1,0 +1,227 @@
+.ats-checker-page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem 1.5rem;
+}
+
+.ats-checker-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 3rem auto;
+}
+
+.ats-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #1A73E8;
+  background: rgba(0, 125, 255, 0.08);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 125, 255, 0.25);
+  margin-bottom: 1rem;
+}
+
+.ats-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-primary, #000000);
+  margin-bottom: 0.75rem;
+}
+
+.ats-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary, #666666);
+  line-height: 1.6;
+}
+
+.ats-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .ats-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ats-input-card, .ats-output-card {
+  background: var(--bg-primary, #ffffff);
+  border: 1px solid var(--border-primary, #e5e5e5);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.card-section-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-primary, #e5e5e5);
+  padding-bottom: 0.75rem;
+}
+
+.ats-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-block label {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.input-block textarea {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-primary, #e5e5e5);
+  background: var(--bg-secondary, #f5f5f5);
+  color: var(--text-primary, #000000);
+  resize: vertical;
+}
+
+.btn-analyze-ats {
+  background: #1A73E8;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.2s ease;
+}
+
+.btn-analyze-ats:hover:not(:disabled) {
+  background: #0062cc;
+  transform: translateY(-1px);
+}
+
+.btn-analyze-ats:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ats-empty-state {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  color: var(--text-secondary, #666666);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.score-summary-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(0, 125, 255, 0.08);
+  border: 1px solid rgba(0, 125, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.score-ring {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #1A73E8;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(0, 125, 255, 0.4);
+}
+
+.score-number {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.score-max {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.score-breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.breakdown-item {
+  background: var(--bg-secondary, #f5f5f5);
+  border: 1px solid var(--border-primary, #e5e5e5);
+  border-radius: 10px;
+  padding: 0.85rem;
+  text-align: center;
+}
+
+.bd-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-secondary, #666666);
+  margin-bottom: 0.25rem;
+}
+
+.bd-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.missing-keywords-box, .recommendations-box {
+  margin-bottom: 1.5rem;
+}
+
+.missing-keywords-box h4, .recommendations-box h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.keywords-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.kw-chip {
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid #fde68a;
+}
+
+.recommendations-box ul {
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666666);
+  line-height: 1.6;
+}

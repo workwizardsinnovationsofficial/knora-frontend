@@ -1,0 +1,41 @@
+@import '../Signup/Signup.css';
+
+.link-forgot {
+  font-size: 0.75rem;
+  color: #1A73E8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link-forgot:hover {
+  text-decoration: underline;
+}
+
+/* Gradient Hero Text in Login Showcase */
+.gradient-text-hero {
+  background: linear-gradient(135deg, #1A73E8 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feat-icon-blue {
+  color: #1A73E8;
+  flex-shrink: 0;
+}
+
+/* Strict Input Focus Override (No Red Outlines) */
+.field-input-box input {
+  outline: none !important;
+}
+
+.field-input-box input:focus {
+  outline: none !important;
+  border-color: #1A73E8 !important;
+  box-shadow: 0 0 0 3.5px rgba(26, 115, 232, 0.16) !important;
+}
+
+.field-input-box input:invalid,
+.field-input-box input:required {
+  box-shadow: none !important;
+  outline: none !important;
+}

@@ -1,0 +1,62 @@
+export const jobsMockData = [
+  {
+    id: 'job-1',
+    title: 'Software Development Engineer Intern',
+    company: 'Google',
+    logo: 'https://logo.clearbit.com/google.com',
+    location: 'Bengaluru / Hybrid',
+    type: 'Internship',
+    stipend: '₹85,000 / month',
+    experience: '0-1 Years',
+    skills: ['Python', 'Data Structures', 'C++', 'Algorithms'],
+    deadline: 'Apply in 5 days',
+    matchPercentage: 94,
+    category: 'Software Engineering',
+    postedDate: '2 days ago'
+  },
+  {
+    id: 'job-2',
+    title: 'Frontend React Engineer (Graduate 2026)',
+    company: 'Microsoft',
+    logo: 'https://logo.clearbit.com/microsoft.com',
+    location: 'Hyderabad / Remote',
+    type: 'Full Time',
+    stipend: '18 LPA - 24 LPA',
+    experience: 'Fresher / 0 Years',
+    skills: ['React', 'TypeScript', 'Tailwind CSS', 'Redux'],
+    deadline: 'Apply in 8 days',
+    matchPercentage: 91,
+    category: 'Web Development',
+    postedDate: '1 day ago'
+  },
+  {
+    id: 'job-3',
+    title: 'AI/ML Research Intern',
+    company: 'Amazon Web Services',
+    logo: 'https://logo.clearbit.com/amazon.com',
+    location: 'Bengaluru',
+    type: 'Internship',
+    stipend: '₹75,000 / month',
+    experience: '0-1 Years',
+    skills: ['PyTorch', 'TensorFlow', 'Python', 'NLP'],
+    deadline: 'Apply in 12 days',
+    matchPercentage: 88,
+    category: 'Artificial Intelligence',
+    postedDate: '3 days ago'
+  },
+  {
+    id: 'job-4',
+    title: 'Backend Node.js Developer',
+    company: 'Razorpay',
+    logo: 'https://logo.clearbit.com/razorpay.com',
+    location: 'Bengaluru / Remote',
+    type: 'Full Time',
+    stipend: '14 LPA - 20 LPA',
+    experience: '0-2 Years',
+    skills: ['Node.js', 'Express', 'MongoDB', 'Redis'],
+    deadline: 'Apply in 3 days',
+    matchPercentage: 85,
+    category: 'Backend Development',
+    postedDate: 'Just now'
+  }
+];
