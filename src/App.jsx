@@ -21,6 +21,8 @@ import GoogleCallback from './pages/Auth/GoogleCallback';
 import Academics from './pages/Academics/Academics';
 import SubjectDetails from './pages/Academics/SubjectDetails';
 import TopicLearning from './pages/Academics/TopicLearning';
+import PreviousPapers from './pages/Academics/PreviousPapers';
+import ImportantQuestions from './pages/Academics/ImportantQuestions';
 
 // Student Corner Suite Pages
 import StudentCorner from './pages/StudentCorner/StudentCorner';
@@ -81,6 +83,8 @@ function App() {
                       <Route path="/academics" element={<Academics />} />
                       <Route path="/academics/subjects" element={<Academics />} />
                       <Route path="/academics/subject/:subjectId" element={<SubjectDetails />} />
+                      <Route path="/academics/subject/:subjectId/previous-papers" element={<PreviousPapers />} />
+                      <Route path="/academics/subject/:subjectId/important-questions" element={<ImportantQuestions />} />
                       <Route path="/academics/subject/:subjectId/unit/:unitId/topic/:topicId" element={<TopicLearning />} />
                       <Route path="/playlist/:subject/:id" element={<TopicLearning />} />
 

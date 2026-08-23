@@ -1,203 +1,454 @@
-.academics-page-container {
-  max-width: 1280px;
+.academics-page-wrapper {
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem 1.5rem;
+  padding: 2.5rem 1.5rem 5rem 1.5rem;
+  font-family: inherit;
 }
 
-.academics-hero-banner {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 2.5rem auto;
+/* ---------------- Hero Header (Pic 2) ---------------- */
+.academics-hero-header {
+  margin-bottom: 2rem;
 }
 
-.banner-pill {
+.academics-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-primary, #0f172a);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.academics-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary, #64748b);
+  line-height: 1.5;
+}
+
+.search-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: #007DFF;
+  margin-top: 1rem;
   background: rgba(0, 125, 255, 0.08);
+  color: #007DFF;
   padding: 0.35rem 0.85rem;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 125, 255, 0.25);
-  margin-bottom: 1rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(0, 125, 255, 0.2);
 }
 
-.banner-title {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--text-primary, #000000);
-  margin-bottom: 0.75rem;
+/* ---------------- Filter Form (Pic 2 Layout) ---------------- */
+.academics-filter-form {
+  margin-bottom: 2.5rem;
 }
 
-.banner-subtitle {
-  font-size: 1rem;
-  color: var(--text-secondary, #666666);
-  line-height: 1.6;
+.filters-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.academic-filters-card {
-  background: var(--bg-secondary, #f5f5f5);
-  border: 1px solid var(--border-primary, #e5e5e5);
+.filter-select-group {
+  flex: 1 1 150px;
+  min-width: 140px;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-primary, #cbd5e1);
+  background-color: var(--bg-primary, #ffffff);
+  color: var(--text-primary, #1e293b);
+  font-size: 0.9rem;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: #007DFF;
+  box-shadow: 0 0 0 3px rgba(0, 125, 255, 0.12);
+}
+
+.btn-submit-filters {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-submit-filters:hover {
+  background-color: #007DFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 125, 255, 0.25);
+}
+
+.btn-submit-filters:active {
+  transform: translateY(0);
+}
+
+/* ---------------- Initial Prompt Card ---------------- */
+.academic-prompt-card {
+  background: var(--bg-secondary, #f8fafc);
+  border: 1px dashed var(--border-primary, #cbd5e1);
   border-radius: 16px;
-  padding: 1.5rem 2rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.prompt-content {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.prompt-icon {
+  color: #007DFF;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.prompt-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary, #1e293b);
+}
+
+.prompt-content p {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #64748b);
+  line-height: 1.5;
+}
+
+/* ---------------- Results Section (Pic 3 Layout) ---------------- */
+.academic-results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Syllabus Top Banner (Pic 3) */
+.syllabus-banner-box {
+  background: var(--bg-primary, #ffffff);
+  border: 1px solid var(--border-primary, #cbd5e1);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.syllabus-left-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.syllabus-book-icon {
+  color: #007DFF;
+}
+
+.syllabus-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary, #0f172a);
+}
+
+.syllabus-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btn-syllabus-btn {
+  background: transparent;
+  border: 1px solid var(--border-primary, #64748b);
+  color: var(--text-primary, #1e293b);
+  padding: 0.35rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-syllabus-btn:hover {
+  background: var(--bg-secondary, #f1f5f9);
+  border-color: #007DFF;
+  color: #007DFF;
+}
+
+/* Subject Cards Grid (Pic 3) */
+.subjects-cards-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.25rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 @media (max-width: 1024px) {
-  .academic-filters-card {
+  .subjects-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .academic-filters-card {
+@media (max-width: 640px) {
+  .subjects-cards-grid {
     grid-template-columns: 1fr;
+  }
+  .filters-flex-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-submit-filters {
+    width: 100%;
   }
 }
 
-.filter-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.filter-group label {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text-primary, #000000);
-}
-
-.filter-group select {
-  padding: 0.65rem;
-  border-radius: 8px;
-  border: 1px solid var(--border-primary, #e5e5e5);
-  background: #ffffff;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-primary, #000000);
-}
-
-.subjects-header-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.subjects-header-row h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-}
-
-.selected-tag {
-  background: rgba(0, 125, 255, 0.1);
-  color: #007DFF;
-  padding: 0.4rem 0.85rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.subjects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .subjects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.subject-card {
+/* Individual Subject Card (Pic 3) */
+.subject-card-item {
   background: var(--bg-primary, #ffffff);
-  border: 1px solid var(--border-primary, #e5e5e5);
-  border-radius: 16px;
-  padding: 1.75rem;
+  border: 1px solid var(--border-primary, #cbd5e1);
+  border-radius: 12px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
-}
-
-.sub-top-bar {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  min-height: 230px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
-.sub-code {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: #007DFF;
+.subject-card-item:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
-.sub-units {
-  font-size: 0.75rem;
-  font-weight: 700;
-  background: var(--bg-secondary, #f5f5f5);
-  padding: 0.25rem 0.6rem;
-  border-radius: 6px;
-}
-
-.sub-title {
-  font-size: 1.2rem;
-  font-weight: 800;
-}
-
-.sub-meta {
-  font-size: 0.875rem;
-  color: var(--text-secondary, #666666);
-}
-
-.sub-action-btns {
+.subject-card-title-row {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.sub-book-icon {
+  color: #007DFF;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.subject-name-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary, #0f172a);
+  line-height: 1.35;
+}
+
+/* Resource List Links inside Card */
+.subject-resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
   margin-top: 0.5rem;
 }
 
-.btn-start-learning {
-  background: #007DFF;
-  color: #ffffff;
+.resource-item-btn {
+  background: transparent;
   border: none;
-  padding: 0.6rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text-secondary, #475569);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  width: max-content;
+}
+
+.resource-item-btn .res-icon {
+  color: #64748b;
+  transition: color 0.15s ease;
+}
+
+.resource-item-btn:hover {
+  background: rgba(0, 125, 255, 0.06);
+  color: #007DFF;
+}
+
+.resource-item-btn:hover .res-icon {
+  color: #007DFF;
+}
+
+/* ---------------- Modal Styles ---------------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 1.5rem;
+}
+
+.syllabus-modal-card {
+  background: var(--bg-primary, #ffffff);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  animation: modalPop 0.25s ease-out;
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-primary, #e2e8f0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.modal-title-flex h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary, #0f172a);
+}
+
+.btn-close-modal {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-close-modal:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-meta-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #007DFF;
+  background: rgba(0, 125, 255, 0.08);
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.syllabus-topics-preview h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary, #1e293b);
+  margin-bottom: 0.75rem;
+}
+
+.syllabus-topics-preview ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.syllabus-topics-preview li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.85rem;
+  background: var(--bg-secondary, #f8fafc);
   border-radius: 8px;
   font-size: 0.875rem;
-  font-weight: 700;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+  border: 1px solid var(--border-primary, #e2e8f0);
 }
 
-.search-query-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.85rem;
-  color: #1A73E8;
-  background: rgba(26, 115, 232, 0.08);
-  padding: 0.45rem 1rem;
-  border-radius: 99px;
-  border: 1px solid rgba(26, 115, 232, 0.2);
-  margin-top: 1rem;
+.credits-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
 }
 
-.no-subjects-found {
-  grid-column: span 2;
-  text-align: center;
-  padding: 3rem 1.5rem;
-  font-size: 1rem;
-  color: var(--text-secondary, #64748b);
+.modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-primary, #e2e8f0);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
   background: var(--bg-secondary, #f8fafc);
-  border-radius: 16px;
-  border: 1px dashed var(--border-primary, #cbd5e1);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #007DFF;
+  border: none;
+  color: #ffffff;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #0066cc;
 }
