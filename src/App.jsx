@@ -26,7 +26,7 @@ import ImportantQuestions from './pages/Academics/ImportantQuestions';
 
 // Student Corner Suite Pages
 import StudentCorner from './pages/StudentCorner/StudentCorner';
-import ResumeMaker from './pages/StudentCorner/Resume/ResumeMaker';
+import ResumeMakerPage from './pages/StudentCorner/Resume/ResumeMakerPage';
 import ATSChecker from './pages/StudentCorner/Resume/ATSChecker';
 import Portfolio from './pages/StudentCorner/Portfolio/Portfolio';
 import JobPortal from './pages/StudentCorner/JobPortal/JobPortal';
@@ -38,6 +38,7 @@ import Profile from './pages/Profile/Profile';
 import NotFound from './pages/NotFound/NotFound';
 
 import { AuthModalProvider } from './context/AuthModalContext';
+import CustomBlueCursor from './components/Common/CustomBlueCursor';
 
 import './App.css';
 
@@ -90,8 +91,8 @@ function App() {
 
                       {/* Student Corner Suite Routes */}
                       <Route path="/student-corner" element={<StudentCorner />} />
-                      <Route path="/student-corner/resume" element={<ResumeMaker />} />
-                      <Route path="/student-corner/resume/maker" element={<ResumeMaker />} />
+                      <Route path="/student-corner/resume" element={<ResumeMakerPage />} />
+                      <Route path="/student-corner/resume/maker" element={<ResumeMakerPage />} />
                       <Route path="/student-corner/ats-checker" element={<ATSChecker />} />
                       <Route path="/student-corner/portfolio" element={<Portfolio />} />
                       <Route path="/student-corner/jobs" element={<JobPortal />} />

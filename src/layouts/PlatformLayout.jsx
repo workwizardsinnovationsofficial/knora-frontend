@@ -6,8 +6,8 @@ import Footer from '../components/Footer/Footer';
 const PlatformLayout = () => {
   const location = useLocation();
 
-  // Hide footer on Topic Learning page as requested by user
-  const isTopicLearningPage = location.pathname.includes('/topic/');
+  // Hide footer on Topic Learning page and Resume pages as requested by user
+  const hideFooter = location.pathname.includes('/topic/') || location.pathname.includes('/student-corner/resume');
 
   return (
     <div className="platform-layout-wrapper">
@@ -15,7 +15,7 @@ const PlatformLayout = () => {
       <main className="platform-main-content">
         <Outlet />
       </main>
-      {!isTopicLearningPage && <Footer />}
+      {!hideFooter && <Footer />}
     </div>
   );
 };
