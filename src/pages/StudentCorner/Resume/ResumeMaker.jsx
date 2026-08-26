@@ -117,20 +117,22 @@ const ResumeMaker = ({ onBackToDashboard, onChangeTemplateClick }) => {
 
   return (
     <div className="resume-maker-app-container">
-      {/* 1. STANDALONE SUB-HEADER BAR FOR BACK BUTTON */}
-      <div className="maker-sub-header-bar">
-        {onBackToDashboard && (
-          <button className="btn-standalone-corner-back" onClick={onBackToDashboard} title="Go back to previous page">
-            <ArrowLeft size={16} />
+      {/* 1. SEPARATE TOP-LEFT EDGE BACK CONTAINER */}
+      {onBackToDashboard && (
+        <div className="maker-top-edge-bar">
+          <button className="btn-top-edge-back" onClick={onBackToDashboard} title="Go back to previous page">
+            <ArrowLeft size={14} />
             <span>Back</span>
           </button>
-        )}
-      </div>
+        </div>
+      )}
 
       {/* 2. MAIN WORKSPACE HEADER BAR (TITLE & ACTIONS) */}
       <div className="maker-nav-bar">
         <div className="nav-left-group">
           <div className="title-and-status-inline">
+
+
             <input
               type="text"
               className="resume-title-input"

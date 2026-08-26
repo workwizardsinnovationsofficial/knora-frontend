@@ -6,8 +6,11 @@ import Footer from '../components/Footer/Footer';
 const PlatformLayout = () => {
   const location = useLocation();
 
-  // Hide footer on Topic Learning page and Resume pages as requested by user
-  const hideFooter = location.pathname.includes('/topic/') || location.pathname.includes('/student-corner/resume');
+  // Hide footer on Topic Learning page, Resume pages, and ATS Checker as requested by user
+  const hideFooter = location.pathname.includes('/topic/') || 
+                     location.pathname.includes('/student-corner/resume') || 
+                     location.pathname.includes('/student-corner/ats-checker');
+
 
   return (
     <div className="platform-layout-wrapper">
